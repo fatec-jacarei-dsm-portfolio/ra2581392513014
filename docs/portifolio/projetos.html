@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .tab-btns {
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .tab-btns button {
+      margin: 0 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="info.html">Informações</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Meus Projetos</h1>
+
+    <div class="tab-btns">
+      <button onclick="mostrar('academicos')">Acadêmicos</button>
+      <button onclick="mostrar('pessoais')">Pessoais</button>
+    </div>
+
+    <section id="academicos" class="tab">
+      <h2>Projetos Acadêmicos</h2>
+
+      <div class="projeto">
+        <h3>Projeto de Sistema Web</h3>
+        <p><strong>Descrição:</strong> Sistema de cadastro de alunos feito com HTML, CSS, JavaScript e PHP.</p>
+        <p><strong>Minha participação:</strong> Desenvolvimento do backend em PHP e integração com banco de dados.</p>
+        <a href="https://github.com/seuusuario/sistema-web" target="_blank">Ver no GitHub</a>
+      </div>
+    </section>
+
+    <section id="pessoais" class="tab hidden">
+      <h2>Projetos Pessoais</h2>
+
+      <div class="projeto">
+        <h3>To-Do App</h3>
+        <p><strong>Descrição:</strong> Aplicativo simples de tarefas usando JavaScript puro.</p>
+        <p><strong>Minha participação:</strong> Desenvolvimento completo do frontend.</p>
+        <a href="https://github.com/seuusuario/todo-app" target="_blank">Ver no GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Manuela Castro</p>
+  </footer>
+
+  <script>
+    function mostrar(tab) {
+      document.querySelectorAll('.tab').forEach(section => {
+        section.classList.add('hidden');
+      });
+      document.getElementById(tab).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
