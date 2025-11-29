@@ -179,9 +179,9 @@ a:hover {
 }
 
 .icon {
-  position: fixed;
-  top: 25px;
-  right: 25px;
+  position: relative;
+  float: right;
+  margin-right: 10px;
   width: 50px;
   /* tamanho do ícone */
   height: 50px;
